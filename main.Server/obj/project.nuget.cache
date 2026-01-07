@@ -1,0 +1,13 @@
+{
+  "version": 2,
+  "dgSpecHash": "rtl6Ev31XBU=",
+  "success": true,
+  "projectFilePath": "C:\\Development\\thomasplant.ca\\main.Server\\main.Server.csproj",
+  "expectedPackageFiles": [
+    "C:\\Users\\Thomas Plant\\.nuget\\packages\\microsoft.aspnetcore.openapi\\10.0.0\\microsoft.aspnetcore.openapi.10.0.0.nupkg.sha512",
+    "C:\\Users\\Thomas Plant\\.nuget\\packages\\microsoft.aspnetcore.spaproxy\\10.0.0\\microsoft.aspnetcore.spaproxy.10.0.0.nupkg.sha512",
+    "C:\\Users\\Thomas Plant\\.nuget\\packages\\microsoft.openapi\\2.0.0\\microsoft.openapi.2.0.0.nupkg.sha512",
+    "C:\\Users\\Thomas Plant\\.nuget\\packages\\microsoft.visualstudio.azure.containers.tools.targets\\1.23.0\\microsoft.visualstudio.azure.containers.tools.targets.1.23.0.nupkg.sha512"
+  ],
+  "logs": []
+}
