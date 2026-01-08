@@ -24,7 +24,7 @@
           "build/Microsoft.AspNetCore.OpenApi.targets": {}
         }
       },
-      "Microsoft.AspNetCore.SpaProxy/10.0.0": {
+      "Microsoft.AspNetCore.SpaProxy/10.0.1": {
         "type": "package",
         "compile": {
           "lib/net10.0/Microsoft.AspNetCore.SpaProxy.dll": {}
@@ -80,10 +80,10 @@
         "microsoft.aspnetcore.openapi.nuspec"
       ]
     },
-    "Microsoft.AspNetCore.SpaProxy/10.0.0": {
-      "sha512": "Z6gvWjw21EYV9/0VRq1ifCyhOOLwRDlU7TGrzLi/Bv4IbLmy0cw9PAasF+RoUM+sg6q4CG9WCnt1TmYpNwN0yw==",
+    "Microsoft.AspNetCore.SpaProxy/10.0.1": {
+      "sha512": "EpbXywkfrb6drP1+Dga+eF4YPswXHWEyDCHjtPbmKAgoHSf1OZN8uJwpm3ZczpRz/w4p9ZZGrTFYcMlNquJo9w==",
       "type": "package",
-      "path": "microsoft.aspnetcore.spaproxy/10.0.0",
+      "path": "microsoft.aspnetcore.spaproxy/10.0.1",
       "files": [
         ".nupkg.metadata",
         ".signature.p7s",
@@ -91,7 +91,7 @@
         "THIRD-PARTY-NOTICES.TXT",
         "build/Microsoft.AspNetCore.SpaProxy.targets",
         "lib/net10.0/Microsoft.AspNetCore.SpaProxy.dll",
-        "microsoft.aspnetcore.spaproxy.10.0.0.nupkg.sha512",
+        "microsoft.aspnetcore.spaproxy.10.0.1.nupkg.sha512",
         "microsoft.aspnetcore.spaproxy.nuspec"
       ]
     },
@@ -202,31 +202,25 @@
     ]
   },
   "packageFolders": {
-    "C:\\Users\\Thomas Plant\\.nuget\\packages\\": {},
-    "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages": {}
+    "/home/plant/.nuget/packages/": {}
   },
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\Development\\thomasplant.ca\\main.Server\\main.Server.csproj",
+      "projectUniqueName": "/home/plant/Documents/thomasplant.ca/main.Server/main.Server.csproj",
       "projectName": "main.Server",
-      "projectPath": "C:\\Development\\thomasplant.ca\\main.Server\\main.Server.csproj",
-      "packagesPath": "C:\\Users\\Thomas Plant\\.nuget\\packages\\",
-      "outputPath": "C:\\Development\\thomasplant.ca\\main.Server\\obj\\",
+      "projectPath": "/home/plant/Documents/thomasplant.ca/main.Server/main.Server.csproj",
+      "packagesPath": "/home/plant/.nuget/packages/",
+      "outputPath": "/home/plant/Documents/thomasplant.ca/main.Server/obj/",
       "projectStyle": "PackageReference",
-      "fallbackFolders": [
-        "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
-      ],
       "configFilePaths": [
-        "C:\\Users\\Thomas Plant\\AppData\\Roaming\\NuGet\\NuGet.Config",
-        "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.FallbackLocation.config",
-        "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
+        "/home/plant/.nuget/NuGet/NuGet.Config"
       ],
       "originalTargetFrameworks": [
         "net10.0"
       ],
       "sources": {
-        "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
+        "/usr/lib64/dotnet/library-packs": {},
         "https://api.nuget.org/v3/index.json": {}
       },
       "frameworks": {
@@ -283,7 +277,7 @@
             "privateAssets": "all"
           }
         },
-        "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\10.0.100/PortableRuntimeIdentifierGraph.json",
+        "runtimeIdentifierGraphPath": "/usr/lib64/dotnet/sdk/10.0.101/PortableRuntimeIdentifierGraph.json",
         "packagesToPrune": {
           "Microsoft.AspNetCore": "(,10.0.32767]",
           "Microsoft.AspNetCore.Antiforgery": "(,10.0.32767]",

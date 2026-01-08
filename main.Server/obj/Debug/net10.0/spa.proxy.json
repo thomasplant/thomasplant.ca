@@ -3,7 +3,7 @@
 "ServerUrl": "https://localhost:63369",
 "RedirectUrl": "",
 "LaunchCommand": "npm run dev",
-"WorkingDirectory": "C:\\Development\\thomasplant.ca\\main.Server\\..\\main.client",
+"WorkingDirectory": "/home/plant/Documents/thomasplant.ca/main.Server/../main.client",
 "MaxTimeoutInSeconds": "120",
 "KeepRunning": "false"
 }
