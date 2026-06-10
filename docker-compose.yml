@@ -11,6 +11,21 @@ services:
     volumes:
       - pgdata:/var/lib/postgresql/data
 
+  minio:
+    image: minio/minio
+    restart: unless-stopped
+    # "server" starts MinIO; /data is where it stores objects; the console
+    # (web UI) is exposed on its own port so we can browse buckets visually.
+    command: server /data --console-address ":9001"
+    environment:
+      MINIO_ROOT_USER: "${MINIO_ROOT_USER}"
+      MINIO_ROOT_PASSWORD: "${MINIO_ROOT_PASSWORD}"
+    ports:
+      - "9000:9000"   # S3 API — the AWS SDK talks to this
+      - "9001:9001"   # Console — the web UI at http://localhost:9001
+    volumes:
+      - miniodata:/data
+
   server:
     build:
       context: "."
@@ -19,8 +34,14 @@ services:
       - "8080:8080"
     depends_on:
       - db
+      - minio
     environment:
       - ConnectionStrings__DefaultConnection=Host=db;Database=thomasplant;Username=thomas;Password=${POSTGRES_PASSWORD}
+      # Inside the Docker network, MinIO is reachable by its service name.
+      - Storage__Endpoint=http://minio:9000
+      - Storage__AccessKey=${MINIO_ROOT_USER}
+      - Storage__SecretKey=${MINIO_ROOT_PASSWORD}
 
 volumes:
   pgdata:
+  miniodata:

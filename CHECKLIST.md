@@ -1,25 +1,25 @@
 # Pixieset Clone — Build Checklist
 
 ## Phase 1: Database & Core Models
-- [ ] Create `AppDbContext` in `main.Server/Data/`
-- [ ] Wire up DbContext in `Program.cs` with Npgsql provider
-- [ ] Define models:
-  - [ ] `Gallery` (Id, Title, Slug, CoverImageUrl, CreatedAt, UpdatedAt)
-  - [ ] `Photo` (Id, GalleryId, OriginalKey, ThumbnailKey, Width, Height, SortOrder, UploadedAt)
-  - [ ] `Client` (Id, Name, Email, GalleryId — for client delivery)
-- [ ] Run first EF migration (`dotnet ef migrations add InitialCreate`)
-- [ ] Apply migration (`dotnet ef database update`)
-- [ ] Verify tables in PostgreSQL via `docker compose exec db psql`
+- [x] Create `AppDbContext` in `main.Server/Data/`
+- [x] Wire up DbContext in `Program.cs` with Npgsql provider
+- [x] Define models:
+  - [x] `Gallery` (Id, Title, Slug, CoverImageUrl, CreatedAt, UpdatedAt)
+  - [x] `Photo` (Id, GalleryId, OriginalKey, ThumbnailKey, Width, Height, SortOrder, UploadedAt)
+  - [x] `Client` (Id, Name, Email, GalleryId — for client delivery)
+- [x] Run first EF migration (`dotnet ef migrations add InitialCreate`)
+- [x] Apply migration (`dotnet ef database update`)
+- [x] Verify tables in PostgreSQL via `docker compose exec db psql`
 
 ## Phase 2: MinIO (S3-Compatible Object Storage)
-- [ ] Add MinIO service to `docker-compose.yml` (ports 9000 API / 9001 console)
-- [ ] Install `AWSSDK.S3` NuGet package in backend
-- [ ] Create `StorageService` that talks to MinIO using S3 API
-- [ ] Create buckets: `originals`, `thumbnails`
-- [ ] Implement upload endpoint — accept file, store original in MinIO
-- [ ] Generate thumbnail on upload (ImageSharp or SkiaSharp) and store in `thumbnails` bucket
-- [ ] Implement presigned URL generation for serving images
-- [ ] Test uploads via MinIO Console at `localhost:9001`
+- [x] Add MinIO service to `docker-compose.yml` (ports 9000 API / 9001 console)
+- [x] Install `AWSSDK.S3` NuGet package in backend
+- [x] Create `StorageService` that talks to MinIO using S3 API
+- [x] Create buckets: `originals`, `thumbnails`
+- [x] Implement upload endpoint — accept file, store original in MinIO
+- [x] Generate thumbnail on upload (ImageSharp or SkiaSharp) and store in `thumbnails` bucket
+- [x] Implement presigned URL generation for serving images
+- [x] Test uploads via MinIO Console at `localhost:9001`
 
 ## Phase 3: Backend API (Controllers)
 - [ ] `GalleriesController`
